@@ -1,8 +1,5 @@
 import React from "react";
 
-// reactstrap components
-import { Alert, Container } from "reactstrap";
-
 // core components
 
 function Notifications() {

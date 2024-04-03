@@ -13,7 +13,7 @@ function Examples() {
         <Container className="text-center">
           <Row>
             <div className="col">
-              <a href="examples/landing-page.html" target="_blank">
+              <a href="" target="_blank">
                 <img
                   alt="..."
                   className="img-raised"
@@ -23,15 +23,15 @@ function Examples() {
               <Button
                 className="btn-round"
                 color="default"
-                to="/landing-page"
+                to=""
                 outline
                 tag={Link}
               >
-                View Landing Page
+                OPSHIFT
               </Button>
             </div>
             <div className="col">
-              <a href="examples/profile-page.html" target="_blank">
+              <a href="" target="_blank">
                 <img
                   alt="..."
                   className="img-raised"
@@ -41,11 +41,11 @@ function Examples() {
               <Button
                 className="btn-round"
                 color="default"
-                to="/profile-page"
+                to=""
                 outline
                 tag={Link}
               >
-                View Profile Page
+                MoveMaster
               </Button>
             </div>
           </Row>

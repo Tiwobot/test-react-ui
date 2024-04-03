@@ -26,7 +26,7 @@ function Tabs() {
         <Container>
           <Row>
             <Col className="ml-auto mr-auto" md="10" xl="6">
-              <p className="category">Tabs with Icons on Card</p>
+              <p className="category">The Company</p>
               <Card>
                 <CardHeader>
                   <Nav className="justify-content-center" role="tablist" tabs>
@@ -40,7 +40,7 @@ function Tabs() {
                         }}
                       >
                         <i className="now-ui-icons objects_umbrella-13"></i>
-                        Home
+                        People
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -53,7 +53,7 @@ function Tabs() {
                         }}
                       >
                         <i className="now-ui-icons shopping_cart-simple"></i>
-                        Profile
+                        Products
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -66,7 +66,7 @@ function Tabs() {
                         }}
                       >
                         <i className="now-ui-icons shopping_shop"></i>
-                        Messages
+                        Markets
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -79,7 +79,7 @@ function Tabs() {
                         }}
                       >
                         <i className="now-ui-icons ui-2_settings-90"></i>
-                        Settings
+                        Progress
                       </NavLink>
                     </NavItem>
                   </Nav>
@@ -91,161 +91,30 @@ function Tabs() {
                   >
                     <TabPane tabId="iconPills1">
                       <p>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
+                      "Crafted by two anonymous software enthusiasts."
                       </p>
                     </TabPane>
                     <TabPane tabId="iconPills2">
                       <p>
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture. I am the nucleus. I think that’s a
-                        responsibility that I have, to push possibilities, to
-                        show people, this is the level that things could be at.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
+                      Stay tuned for our upcoming projects in software solutions,
+                      logistics, and municipal solutions, currently in development.
                       </p>
                     </TabPane>
                     <TabPane tabId="iconPills3">
                       <p>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
+                      The market for these projects would likely include businesses
+                      and organizations in need of software solutions for logistics
+                      and municipal operations. This could encompass a wide range of
+                      industries such as transportation, warehousing, government
+                      services, and urban planning. These solutions could cater to
+                      companies looking to improve their supply chain management,
+                      efficiency of operations, and overall service delivery to the
+                      public.
                       </p>
                     </TabPane>
                     <TabPane tabId="iconPills4">
                       <p>
-                        "I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture. I am the nucleus. I think that’s a
-                        responsibility that I have, to push possibilities, to
-                        show people, this is the level that things could be at."
-                      </p>
-                    </TabPane>
-                  </TabContent>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col className="ml-auto mr-auto" md="10" xl="6">
-              <p className="category">Tabs with Background on Card</p>
-              <Card>
-                <CardHeader>
-                  <Nav
-                    className="nav-tabs-neutral justify-content-center"
-                    data-background-color="blue"
-                    role="tablist"
-                    tabs
-                  >
-                    <NavItem>
-                      <NavLink
-                        className={pills === "1" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("1");
-                        }}
-                      >
-                        Home
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={pills === "2" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("2");
-                        }}
-                      >
-                        Profile
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={pills === "3" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("3");
-                        }}
-                      >
-                        Messages
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={pills === "4" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("4");
-                        }}
-                      >
-                        Settings
-                      </NavLink>
-                    </NavItem>
-                  </Nav>
-                </CardHeader>
-                <CardBody>
-                  <TabContent
-                    className="text-center"
-                    activeTab={"pills" + pills}
-                  >
-                    <TabPane tabId="pills1">
-                      <p>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
-                      </p>
-                    </TabPane>
-                    <TabPane tabId="pills2">
-                      <p>
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture. I am the nucleus. I think that’s a
-                        responsibility that I have, to push possibilities, to
-                        show people, this is the level that things could be at.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
-                      </p>
-                    </TabPane>
-                    <TabPane tabId="pills3">
-                      <p>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
-                      </p>
-                    </TabPane>
-                    <TabPane tabId="pills4">
-                      <p>
-                        "I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture. I am the nucleus. I think that’s a
-                        responsibility that I have, to push possibilities, to
-                        show people, this is the level that things could be at."
+                      "Embarking on an exciting journey, we're forging ahead with our dual focus on securing deals and developing cutting-edge software solutions. Stay tuned for updates as we make strides in bringing innovative projects to life, destined to revolutionize the realms of logistics and municipal services."
                       </p>
                     </TabPane>
                   </TabContent>

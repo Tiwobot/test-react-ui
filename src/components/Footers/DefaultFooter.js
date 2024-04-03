@@ -40,7 +40,7 @@ function DefaultFooter() {
             </ul>
           </nav>
           <div className="copyright" id="copyright">
-            © {new Date().getFullYear()}, Designed by{" "}
+            © {new Date().getFullYear()}, Dened by{" "}
             <a
               href="https://www.invisionapp.com?ref=nukr-default-footer"
               target="_blank"

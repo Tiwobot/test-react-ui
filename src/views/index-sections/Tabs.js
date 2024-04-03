@@ -90,30 +90,30 @@ function Tabs() {
                   >
                     <TabPane tabId="iconPills1">
                       <p>
-                      "Crafted by two anonymous software enthusiasts."
+                      <b>"Crafted by two anonymous software enthusiasts."</b>
                       </p>
                     </TabPane>
                     <TabPane tabId="iconPills2">
                       <p>
-                      Stay tuned for our upcoming projects in software solutions,
-                      logistics, and municipal solutions, currently in development.
+                      <b>Stay tuned for our upcoming projects in software solutions,
+                      logistics, and municipal solutions, currently in development.</b>
                       </p>
                     </TabPane>
                     <TabPane tabId="iconPills3">
                       <p>
-                      The market for these projects would likely include businesses
+                      <b>The market for these projects would likely include businesses
                       and organizations in need of software solutions for logistics
                       and municipal operations. This could encompass a wide range of
                       industries such as transportation, warehousing, government
                       services, and urban planning. These solutions could cater to
                       companies looking to improve their supply chain management,
                       efficiency of operations, and overall service delivery to the
-                      public.
+                      public.</b>
                       </p>
                     </TabPane>
                     <TabPane tabId="iconPills4">
                       <p>
-                      "Embarking on an exciting journey, we're forging ahead with our dual focus on securing deals and developing cutting-edge software solutions. Stay tuned for updates as we make strides in bringing innovative projects to life, destined to revolutionize the realms of logistics and municipal services."
+                      <b>"Embarking on an exciting journey, we're forging ahead with our dual focus on securing deals and developing cutting-edge software solutions. Stay tuned for updates as we make strides in bringing innovative projects to life, destined to revolutionize the realms of logistics and municipal services."</b>
                       </p>
                     </TabPane>
                   </TabContent>

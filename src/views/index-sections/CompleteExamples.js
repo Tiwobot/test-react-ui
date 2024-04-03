@@ -14,7 +14,7 @@ function CompleteExamples() {
             <Col lg="8" md="12">
               <h2 className="title">Completed with examples</h2>
               <h5 className="description">
-              We aim to transcend the traditional notion of a company, evolving into a living entity that demonstrates its transformative capabilities to enhance our collective future.
+              <b>We aim to transcend the traditional notion of a company, evolving into a living entity that demonstrates its transformative capabilities to enhance our collective future.</b>
               </h5>
             </Col>
           </Row>

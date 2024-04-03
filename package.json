@@ -1,6 +1,6 @@
 {
-  "name": "now-ui-kit-react",
-  "version": "1.5.2",
+  "name": "liavenic",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "moment": "2.29.4",

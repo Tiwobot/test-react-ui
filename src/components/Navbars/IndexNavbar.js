@@ -8,7 +8,7 @@ import {
   NavLink,
   Nav,
   Container,
-} from "reactstrap";
+} from "reactstrap-compat";
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");

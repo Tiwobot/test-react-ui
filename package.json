@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "ajv": "^8.17.1",
     "moment": "2.29.4",
     "nouislider": "15.4.0",
-    "react": ">=16.8.0",
+    "react": "^19.2.0",
     "react-bootstrap-switch": "15.5.3",
     "react-datetime": "3.2.0",
-    "react-dom": ">=16.8.0",
+    "react-dom": "^19.2.0",
     "react-router-dom": "6.11.1",
     "react-scripts": "5.0.1",
+    "react-transition-group": "4.4.5",
     "reactstrap": "8.10.0",
     "sass": "1.62.1"
   },
@@ -21,7 +23,8 @@
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-sass": "sass src/assets/scss/now-ui-kit.scss src/assets/css/now-ui-kit.css",
-    "minify-sass": "sass src/assets/scss/now-ui-kit.scss src/assets/css/now-ui-kit.min.css --style compressed"
+    "minify-sass": "sass src/assets/scss/now-ui-kit.scss src/assets/css/now-ui-kit.min.css --style compressed",
+    "postinstall": "patch-package"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,16 +42,44 @@
     ]
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "optionalDependencies": {
     "@babel/core": "7.18.9",
     "typescript": "5.0.4"
   },
+  "devDependencies": {
+    "patch-package": "^8.0.1"
+  },
   "overrides": {
     "svgo": "3.0.2",
     "fsevents": "2.3.2",
-    "chokidar": "3.5.3"
+    "chokidar": "3.5.3",
+    "eslint": {
+      "ajv": "^6.12.6"
+    },
+    "@eslint/eslintrc": {
+      "ajv": "^6.12.6"
+    },
+    "babel-loader": {
+      "schema-utils": {
+        "ajv": "^6.12.6",
+        "ajv-keywords": "^3.5.2"
+      }
+    },
+    "fork-ts-checker-webpack-plugin": {
+      "schema-utils": {
+        "ajv": "^6.12.6",
+        "ajv-keywords": "^3.5.2"
+      }
+    },
+    "file-loader": {
+      "schema-utils": {
+        "ajv": "^6.12.6",
+        "ajv-keywords": "^3.5.2"
+      }
+    },
+    "react-transition-group": "4.4.5"
   }
 }

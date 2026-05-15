@@ -2,7 +2,7 @@
 import React from "react";
 
 // reactstrap components
-import { Container } from "reactstrap";
+import { Container } from "reactstrap-compat";
 // core components
 
 function IndexHeader() {

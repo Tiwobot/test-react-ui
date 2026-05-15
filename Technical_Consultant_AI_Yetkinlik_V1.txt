@@ -1,0 +1,353 @@
+# AI Productivity Hibrit Değerlendirme (Davranış + Bilgi + Güvenlik)
+## Teknik Danışmanlar İçin Yetkinlik Değerlendirme Anketi
+
+**Bilgilendirme:** Bu değerlendirme bireysel performans ölçümü için değil, şirket içi AI dönüşümü programında **AI olgunluğu ve kullanım baseline’ı** ile eğitim ihtiyaçlarını anlamak için hazırlanmıştır. Yanıtlar anonim olarak analiz edilecektir. Sonuç ekranında yalnızca size anlık seviye ve önerilen eğitim başlığı gösterilecektir. Yönetim raporlarında bireysel kişi bilgisi yer almayacaktır.
+
+**Tahmini süre:** 12-16 dakika
+
+**Kapsam:** Bu çalışma şirket içi **AI dönüşümü** kapsamında hazırlanmıştır; amaç bireyleri sınamak değil, teknik danışman kadrosunun AI araçlarına **ne kadar yakın olduğunu**, günlük işte **nasıl kullandığını** ve güvenli / doğrulanabilir kullanım olgunluğunu **baz çizgisi (baseline)** olarak görmektir. Teknik içerik, prompt ve bağlam, güvenlik farkındalığı ve çıktı doğrulama boyutlarını ölçer.
+
+---
+
+# BÖLÜM 0 — Bağlam (Segmentasyon)
+
+## D1. Danışmanlık odağınız (en yakın olanı yazın)
+> (Açık uçlu, örn. Bulut / altyapı, veri ve analitik, uygulama / entegrasyon, siber güvenlik, ERP / iş uygulamaları, diğer)
+
+## D2. İş amaçlı herhangi bir AI aracını daha önce denediniz mi?
+* [ ] Hayır
+* [ ] Evet, birkaç kez denedim
+* [ ] Evet, belirli görevlerde kullanıyorum
+* [ ] Evet, günlük iş akışımın parçası haline geldi
+
+## D3. İş dışında AI araçlarını ne sıklıkla kullanıyorsunuz?
+* [ ] Hiç
+* [ ] Ayda 1-2 kez
+* [ ] Haftada 1-2 kez
+* [ ] Neredeyse her gün
+
+## D4. Günlük işinizde en çok hangi iş türleriyle uğraşıyorsunuz? (BİRDEN ÇOK işaretlenebilir)
+* [ ] Keşif / gereksinim toplama ve dokümantasyon
+* [ ] Çözüm mimarisi veya hedef mimari anlatımı
+* [ ] Teknik teklif, POC / pilot planı veya kapsam netleştirme
+* [ ] Workshop / eğitim materyali veya demo senaryosu hazırlama
+* [ ] Müşteri veya ekip için runbook, geçiş planı, kontrol listesi
+* [ ] Karşılaştırma (ürün, bulut hizmeti, yaklaşım) ve öneri özeti
+* [ ] Uygulama / entegrasyon desteği ve sorun giderme notları
+* [ ] Diğer: ________
+
+---
+
+# BÖLÜM 1 — İş Akışında AI Kullanımı (Davranış)
+*Her soruda size en uygun TEK seçeneği işaretleyin (A4 ve A8 hariç — çoklu seçim).*
+
+## Soru A1 — Keşif ve gereksinim çıktıları
+Keşif sonrası gereksinim özeti veya user story taslağı hazırlarken AI’ı en çok nasıl kullanıyorsunuz?
+* [ ] Kullanmıyorum; notlarımı doğrudan şablonuma aktarıyorum
+* [ ] Ham notları verip genel özet veya madde listesi istiyorum
+* [ ] Öncelik, kapsam dışı, varsayımlar ve açık soruları da isteyecek şekilde yönlendiriyorum
+* [ ] Müşteri bağlamını (hedef, kısıtlar, mevcut sistem özeti) veriyorum; çıktıyı kaynak notlar ve paydaşlarla kontrol ederek netleştiriyorum
+
+## Soru A2 — Mimari veya çözüm anlatımı
+Teknik mimariyi veya çözüm yaklaşımını yazılı / sunum diline dökerken yaklaşımınız nedir?
+* [ ] Tamamen kendim yazıyorum
+* [ ] Taslak cümleleri veya slayt başlıklarını AI’dan alıp düzenliyorum
+* [ ] Bileşenler, entegrasyon noktaları ve güvenlik / operasyon notlarını içeren yapılandırılmış anlatım istiyorum
+* [ ] Hedef kitle (teknik / karma), riskler, NFR ve “bilinmeyenler”i belirterek iteratif ilerliyor; iddiaları referans mimari veya standartlarla hizalıyorum
+
+## Soru A3 — Teklif, POC veya kapsam metni
+Teklif bölümü, POC kapsamı veya “out of scope” netleştirmesi üretirken AI kullanımınız hangisine en yakın?
+* [ ] Kullanmıyorum
+* [ ] Genel metin veya pazarlama dilinde paragraflar üretiyorum
+* [ ] Teslimat fazları, varsayımlar ve bağımlılıkları içeren iskelet istiyorum
+* [ ] Şirket şablonu, yasal / ticari sınırlar ve müşteriye özel maskelemiş bağlamla çalışıyorum; taahhüt ve sayıları doğrudan AI’a bırakmıyorum
+
+## Soru A4 — Workshop ve demo hazırlığı
+Workshop veya demo için AI’ı hangi alanlarda kullanıyorsunuz? (BİRDEN ÇOK işaretlenebilir)
+* [ ] Ajanda ve zaman çizelgesi taslağı
+* [ ] Soru listesi veya “beklenen itirazlar” senaryosu
+* [ ] Lab adımları veya komut dizisi taslağı (ortama göre uyarlanmış)
+* [ ] Katılımcı seviyesine göre sadeleştirilmiş teknik açıklama
+* [ ] Sunumdan sonra bilgi kontrolü veya eksik konu listesi
+* [ ] Hiçbirini kullanmıyorum
+
+## Soru A5 — Karşılaştırma ve öneri özeti
+İki ürün veya iki bulut yaklaşımını karşılaştırırken AI’dan nasıl yararlanıyorsunuz?
+* [ ] Kullanmıyorum; sadece dokümantasyon okuyorum
+* [ ] Genel artı/eksi listesi istiyorum
+* [ ] Değerlendirme kriterlerimi (maliyet, operasyon, güvenlik, yol haritası vb.) vererek tablo istiyorum
+* [ ] Resmi doküman, sürüm ve bölge bilgisini referans göstererek analiz istiyorum; kritik iddiaları kaynakla doğruluyorum
+
+## Soru A6 — Runbook ve operasyonel içerik
+Runbook, geçiş kontrol listesi veya operasyon adımları yazarken AI kullanımınız nedir?
+* [ ] Kullanmıyorum
+* [ ] Genel adım listesi üretiyorum, ortama uyarlıyorum
+* [ ] Rollback, doğrulama adımları ve iletişim noktalarını da istiyorum
+* [ ] Ortam adları ve erişim bilgileri hariç, gerçek süreç ve araçlarla uyumlu taslağı AI ile oluşturup sahada doğrulatıyorum
+
+## Soru A7 — Sorun giderme ve müşteri iletişimi
+Teknik bir sorunu araştırırken veya müşteriye açıklama yazarken AI’dan nasıl faydalanıyorsunuz?
+* [ ] Hayır
+* [ ] Hata mesajını veya belirtiyi verip olası nedenleri listelemesini istiyorum
+* [ ] Köprüleme adımları ve “ne kontrol edildi” özeti istiyorum
+* [ ] Log / yapılandırma parçalarını maskelenmiş şekilde paylaşıp hipotez ve doğrulama planı oluşturuyorum; müşteriye giden metni ton ve hassasiyet açısından gözden geçiriyorum
+
+## Soru A8 — Prompt kalitesi (danışmanlık bağlamında)
+AI’dan daha iyi çıktı almak için aşağıdakilerden hangilerini bilinçli kullanıyorsunuz? (BİRDEN ÇOK işaretlenebilir)
+* [ ] Hedef kitle ve sunum bağlamı (CIO teknik derinlik, ekip operasyon vb.)
+* [ ] Çıktı formatı: tablo, RACI, risk kaydı, karar özeti
+* [ ] Kısıtlar: uyumluluk, bütçe, zaman, mevcut lisans veya platform
+* [ ] “Yapma” listesi: spekülatif ürün özelliği, kesin SLA iddiası vb.
+* [ ] Örnek: şirket içi şablondan kısa parça veya beklenen madde yapısı
+* [ ] İterasyon: önce taslak analiz / plan, sonra detay
+* [ ] Bu tekniklerin hiçbirini bilinçli kullanmıyorum
+
+## Soru A9 — AI çıktısını doğrulama (müşteri yüzüne dönük içerik)
+Müşteri veya üst yönetime gidecek teknik bir özeti AI ile hazırladığınızda doğrulama yaklaşımınız hangisine en yakın?
+* [ ] Genelde doğrudan kullanırım
+* [ ] Dil ve uzunluğu kontrol ederim
+* [ ] Teknik iddia, tarih, sürüm, maliyet ve kapsam sınırlarını kaynak dokümanla kontrol ederim
+* [ ] Taahhüt, uyumluluk, kişisel / müşteri verisi ve yanlış yorum riski olmadan paylaşmam; gerekirse hukuk veya satış ile hizalarım
+
+## Soru A10 — Hassas ve müşteri verisi
+Müşteri ortamı, sözleşme veya şirket içi bilgileri AI ile kullanırken yaklaşımınız hangisine en yakındır?
+* [ ] Gerekirse ayrıntıları doğrudan AI’a yazarım veya yüklerim
+* [ ] Yalnızca isimleri kısaltırım
+* [ ] IP, hostname, lisans anahtarı ve kişisel veriyi çıkarır veya maskeler; hangi aracın kullanılabileceğini kontrol ederim
+* [ ] Veri sınıfı, müşteri sözleşmesi, şirket AI politikası ve minimum paylaşımı birlikte dikkate alırım; onaylı araç veya air-gapped süreç tercih ederim
+
+---
+
+# BÖLÜM 2 — AI Bilgi Düzeyi (Puanlanabilir Test)
+*Her sorunun sadece bir doğru cevabı vardır.*
+
+## Soru B1
+Aşağıdakilerden hangisi AI “hallucination” örneğidir?
+* [ ] AI’ın var olmayan bir kaynağı veya ürün özelliğini gerçekmiş gibi anlatması
+* [ ] AI’ın “Bu konuda yetkim yok” demesi
+* [ ] AI’ın yavaş cevap vermesi
+* [ ] AI’ın cevabı kısa tutması
+
+## Soru B2
+“Müşteri X için geçerli destek SLA’sını özetle” dediğinizde en güvenilir yaklaşım hangisidir?
+* [ ] Soruyu olduğu gibi sormak yeterlidir
+* [ ] Yetkili sözleşme metni, ek veya resmi SLA dokümanını referans / ek olarak vermek
+* [ ] AI’dan “tahmini endüstri standardı” yazmasını istemek
+* [ ] Sadece müşteri adını vermek
+
+## Soru B3
+“Prompt engineering” danışmanlık işinde pratikte ne anlama gelir?
+* [ ] AI modelinin eğitim verisini değiştirmek
+* [ ] İstenen çıktıyı (format, kısıtlar, bağlam) almak için girdileri bilinçli tasarlamak
+* [ ] AI’ın her cevabını doğru varsaymak
+* [ ] Müşteri sunumunu otomatik onaylatmak
+
+## Soru B4
+Müşteriye ait iç ağ topolojisi (IP, hostname, güvenlik grubu adları) içeren bir diyagramı genel bir AI asistanına yüklemeden önce hangi adım zorunludur?
+* [ ] Şirket politikasına uygun maskeleme / anonimleştirme veya onaylı araç kullanımı
+* [ ] Sadece başlığa “gizli” yazmak
+* [ ] AI’a “bu resmi paylaşma” demek
+* [ ] Hiçbir şey yapmaya gerek yok
+
+## Soru B5
+Aşağıdakilerden hangisi teknik danışmanlık çıktısı için genellikle en az faydalı prompt yaklaşımıdır?
+* [ ] Değerlendirme kriterlerini tablo sütunları olarak belirtmek
+* [ ] Hedef kitle ve karar ihtiyacını açıklamak
+* [ ] “Şunu etkileyici şekilde anlat” gibi belirsiz bir ifade kullanmak
+* [ ] Örnek madde yapısı veya şirket şablonundan kısa örnek vermek
+
+## Soru B6
+AI’ın uzun bir keşif notunu özetlerken danışmanlık açısından en yaygın risklerden biri hangisidir?
+* [ ] Kapsam sınırı veya bağımlılıkları yanlış vurgulamak / atlamak
+* [ ] Her zaman metni daha doğru hale getirmek
+* [ ] Her zaman kaynak göstermek
+* [ ] Hiç hata yapmamak
+
+## Soru B7
+AI’dan “aşamalı geçiş planı” veya “doğrulama kontrol listesi” istemek özellikle ne işe yarar?
+* [ ] AI’ın her zaman daha hızlı cevap vermesini sağlar
+* [ ] Karmaşık teslimatlarda çıktıyı yapılandırılmış, gözden geçirilebilir ve sahada doğrulanabilir kılar
+* [ ] Gizli verileri otomatik olarak siler
+* [ ] Müşteri imzasını alır
+
+## Soru B8
+Üçüncü parti ürün veya bulut hizmeti hakkında AI ile araştırma yaparken en doğru yaklaşım hangisidir?
+* [ ] AI’ın verdiği tüm teknik iddiaları doğru kabul etmek
+* [ ] Sürüm, bölge, dokümantasyon tarihi ve resmi kaynakla doğrulamak
+* [ ] En uzun cevabı seçmek
+* [ ] Sadece “daha ikna edici” yazmasını istemek
+
+## Soru B9
+Aşağıdakilerden hangisi genel amaçlı bir AI sohbet aracına doğrudan girilmemesi gereken bilgiye örnektir?
+* [ ] Herkese açık ürün pazarlama sayfası URL’si
+* [ ] Yayınlanmış referans mimari diyagramı (genel örnek)
+* [ ] Müşteriye özel canlı ortam erişim bilgisi veya lisans anahtarı
+* [ ] Genel bulut hizmeti tanımı
+
+## Soru B10
+AI’ın ürettiği müşteri sunumuna konacak teknik iddia (ör. “%99,99 kullanılabilirlik”) göndermeden önce en önemli kontrol hangisidir?
+* [ ] Sadece daha akıcı okunup okunmadığı
+* [ ] Kaynak doküman, sözleşme veya resmi SLA ile uyum; yanlış taahhüt ve kapsam sarkması riski
+* [ ] Daha fazla jargon içerip içermediği
+* [ ] AI tarafından yazılmış olması
+
+---
+
+# BÖLÜM 3 — Senaryo Bazlı Uygulama Soruları
+*Her sorunun sadece bir doğru cevabı vardır.*
+
+## Soru S1
+40 sayfalık bir RFP’den fonksiyonel gereksinimleri ve uyumluluk maddelerini çıkarmanız istendi. En iyi AI kullanımı hangisidir?
+* [ ] Tüm PDF’i yapıştırıp “özetle” demek ve sonucu doğrudan teklife koymak
+* [ ] Bölüm yapısı, çıktı şablonu ve “belirsiz kalan maddeler” listesi istemek; kritik maddeleri RFP ile satır satır kontrol etmek
+* [ ] Sadece ilk bölümü özetletmek
+* [ ] AI’dan daha resmi yazmasını istemek
+
+## Soru S2
+Müşteri verisi içeren bir vaka özetinden workshop konuşma notu hazırlıyorsunuz. En doğru yaklaşım hangisidir?
+* [ ] Tüm kişisel ve kurumsal ayrıntıları olduğu gibi AI’a vermek
+* [ ] Gereksiz tanımlayıcıları çıkarmak veya maskelemek, hedef katılımcı ve süreyi belirtmek, taslağı paylaşmadan önce kontrol etmek
+* [ ] AI’ın ilk cevabını doğrudan dağıtmak
+* [ ] Sadece “kısa not yaz” demek
+
+## Soru S3
+AI size üretim ortamı için bir yapılandırma / script parçası verdi ve “çalışıyor gibi” görünüyor. Ne yapmalısınız?
+* [ ] Doğrudan üretimde uygulamak
+* [ ] Önce uygun bir test / sandbox ortamında ve küçük kapsamda doğrulamak
+* [ ] Sadece açıklama metnini okumak
+* [ ] AI’dan daha uzun script istemek
+
+## Soru S4
+AI size rakip ürün karşılaştırması sundu ancak kaynak göstermedi. En doğru sonraki adım nedir?
+* [ ] Sonucu doğrudan müşteri sunumuna almak
+* [ ] Kaynak ve sürüm bilgisi istemek; kritik iddiaları resmi dokümantasyonla doğrulamak
+* [ ] Cevabı daha kısa yazdırmak
+* [ ] Aynı cevabı farklı dilde yazdırmak
+
+---
+
+# BÖLÜM 4 — Açık Uçlu Sorular
+*Lütfen kısa ve net cevaplayın (2-4 cümle).*
+
+## Soru C1
+Danışmanlık işinizde AI kullanırken en çok zaman kaybettiğiniz veya sonuçtan memnun kalmadığınız bir durumu kısaca anlatın.
+> Cevabınız:
+
+## Soru C2
+“Keşke AI şunu da güvenli ve doğru şekilde yapabilseydi” dediğiniz bir danışmanlık görevi var mı?
+> Cevabınız:
+
+## Soru C3
+Müşteri veya paydaşlara gidecek bir AI çıktısını paylaşmadan önce nasıl kontrol edersiniz?
+> Cevabınız:
+
+## Soru C4
+Müşteri verisi veya taahhüt riski açısından AI kullanırken sizi en çok düşündüren konu nedir?
+> Cevabınız:
+
+---
+
+# BÖLÜM 5 — Ek: AI Olgunluğu (Opsiyonel — Öz değerlendirme)
+*İsterseniz doldurun; Bölüm 1-4’ten bağımsız olarak eğitim önerisi matrisine katkı sağlayabilir.*
+
+## Soru E1
+Teknik danışmanlık işlerinde AI araçlarını ne sıklıkla kullanıyorsunuz?
+*(Tek seçim)*
+* [ ] Hiç kullanmıyorum
+* [ ] Ayda birkaç kez
+* [ ] Haftada birkaç kez
+* [ ] Her gün
+* [ ] Gün içinde aktif olarak sürekli kullanıyorum
+
+## Soru E2
+AI’a görev verirken aşağıdakileri ne sıklıkla eklersiniz?
+*(Her satır için tek seçim: Hiç | Nadiren | Bazen | Sık | Her zaman)*
+
+|                                    | Hiç | Nadiren | Bazen | Sık | Her zaman |
+| ---------------------------------- | --- | ------- | ----- | --- | --------- |
+| Hedef kitle ve sunum bağlamı       |     |         |       |     |           |
+| Kısıtlar (uyumluluk, bütçe, zaman) |     |         |       |     |           |
+| Çıktı formatı (tablo, RACI vb.)    |     |         |       |     |           |
+| “Yapılmaması gerekenler”           |     |         |       |     |           |
+| Maskelemiş örnek veya şablon       |     |         |       |     |           |
+
+## Soru E3
+Aşağıdaki kavramlardan hangilerini biliyor veya işinizde kullanıyorsunuz?
+*(Her satır için tek seçim)*
+
+|                              | Bilmiyorum | Kavramsal biliyorum | Deneme / POC | Gerçek müşteri veya proje işinde kullandım |
+| ---------------------------- | ---------- | ------------------- | ------------ | ------------------------------------------ |
+| RAG                          |            |                     |              |                                            |
+| MCP (Model Context Protocol) |            |                     |              |                                            |
+| Tool / function calling      |            |                     |              |                                            |
+| Context window sınırları     |            |                     |              |                                            |
+| AI agent vs sohbet           |            |                     |              |                                            |
+
+---
+
+# NOTLAR — Puanlama ve Eğitim Planı
+
+## 1. Bilgi Testi Cevap Anahtarı
+B1: 1. seçenek  
+B2: 2. seçenek  
+B3: 2. seçenek  
+B4: 1. seçenek  
+B5: 3. seçenek  
+B6: 1. seçenek  
+B7: 2. seçenek  
+B8: 2. seçenek  
+B9: 3. seçenek  
+B10: 2. seçenek  
+
+**Toplam bilgi puanı:** 0-10
+
+## 2. Senaryo Soruları Cevap Anahtarı
+S1: 2. seçenek  
+S2: 2. seçenek  
+S3: 2. seçenek  
+S4: 2. seçenek  
+
+**Toplam senaryo puanı:** 0-4
+
+## 3. Davranış Puanı
+A1-A3, A5-A7, A9-A10 soruları 1-4 arasında puanlanır (en üst seçenek 4 puan).  
+A4 ve A8 çoklu seçimdir:
+- “Hiçbirini kullanmıyorum” veya “Bu tekniklerin hiçbirini bilinçli kullanmıyorum” seçilirse: 1 puan  
+- 1-2 olumlu seçenek: 2 puan  
+- 3-4 olumlu seçenek: 3 puan  
+- 5 veya daha fazla olumlu seçenek: 4 puan  
+
+**Toplam davranış puanı:** 10-40
+
+## 4. Güvenlik Kritik Kontrolü
+A10, B4, B9, S2 güvenlik ve müşteri verisi açısından kritik sorulardır.  
+Bu sorulardan 2 veya daha fazlasında düşük / yanlış sonuç varsa, genel seviye ne olursa olsun **“AI Güvenliği, Müşteri Verisi ve Danışmanlıkta Gizlilik Eğitimi”** zorunlu önerilir.
+
+## 5. Açık Uçlu Sorular İçin Rubrik
+Açık uçlu cevaplar şu temalara göre etiketlenebilir:
+- **Doğrulama bilinci:** kaynak, sürüm, sözleşme, kapsam, sayısal iddia kontrolü  
+- **Güvenlik bilinci:** müşteri verisi, ortam bilgisi, maskeleme, onaylı araç  
+- **Prompt olgunluğu:** hedef kitle, format, kısıt, iterasyon  
+- **Danışmanlık olgunluğu:** taahhüt riski, paydaş hizalama, şablon ve süreç  
+- **Eğitim ihtiyacı:** zorlanılan görev veya bilgi boşluğu
+
+## 6. Öncelikli Eğitim Öneri Matrisi
+Kurallar aşağıdaki öncelik sırasıyla uygulanmalıdır:
+
+| Öncelik | Koşul | Öneri |
+|---------|-------|-------|
+| 1 | Güvenlik kritik kontrolünde risk varsa | AI Güvenliği, Müşteri Verisi ve Gizlilik — Zorunlu |
+| 2 | Bilgi puanı < 5 | Temel AI Okuryazarlığı ve Doğrulama — Zorunlu |
+| 3 | Bilgi puanı >= 5 ve davranış puanı < 22 | Pratik Atölye: Keşif Özeti, Karşılaştırma Tablosu ve Sunum Taslağı için AI |
+| 4 | Bilgi puanı >= 7 ve davranış puanı >= 30 ve senaryo puanı >= 3 | İleri: Teknik İçerikte Prompt Tasarımı, Bağlam Yönetimi ve Agent / RAG Farkındalığı |
+| 5 | Bilgi puanı < 5 ve davranış puanı >= 28 | Riskli Profil: Taahhüt ve Kaynak Kontrolü Eğitimi — Öncelikli |
+| 6 | Bilgi puanı >= 8 ve davranış puanı < 22 | Yüksek Bilgi / Düşük Kullanım: Araç Erişimi, Şablonlar ve Günlük Senaryolar |
+
+## 7. Önerilen Seviye Etiketleri
+- Seviye 1: Başlangıç  
+- Seviye 2: Temel Kullanıcı  
+- Seviye 3: Uygulayıcı  
+- Seviye 4: Güvenli ve Yetkin Kullanıcı  
+- Seviye 5: AI Champion / İleri Kullanıcı  
+
+Katkınız için teşekkürler.

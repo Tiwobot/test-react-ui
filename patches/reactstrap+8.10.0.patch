@@ -1,0 +1,138 @@
+diff --git a/node_modules/reactstrap/lib/CarouselItem.js b/node_modules/reactstrap/lib/CarouselItem.js
+index adb33aa..9606618 100644
+--- a/node_modules/reactstrap/lib/CarouselItem.js
++++ b/node_modules/reactstrap/lib/CarouselItem.js
+@@ -36,6 +36,7 @@ var CarouselItem = /*#__PURE__*/function (_React$Component) {
+     var _this;
+ 
+     _this = _React$Component.call(this, props) || this;
++    _this.transitionNodeRef = _react.default.createRef();
+     _this.state = {
+       startAnimation: false
+     };
+@@ -101,6 +102,7 @@ var CarouselItem = /*#__PURE__*/function (_React$Component) {
+       enter: slide,
+       exit: slide,
+       in: isIn,
++      nodeRef: this.transitionNodeRef,
+       onEnter: this.onEnter,
+       onEntering: this.onEntering,
+       onExit: this.onExit,
+@@ -113,7 +115,10 @@ var CarouselItem = /*#__PURE__*/function (_React$Component) {
+       var orderClassName = status === _utils.TransitionStatuses.ENTERING && (direction === 'right' ? 'carousel-item-next' : 'carousel-item-prev');
+       var itemClasses = (0, _utils.mapToCssModules)((0, _classnames.default)(className, 'carousel-item', isActive && 'active', directionClassName, orderClassName), cssModule);
+       return /*#__PURE__*/_react.default.createElement(Tag, {
+-        className: itemClasses
++        className: itemClasses,
++        ref: function ref(el) {
++          _this2.transitionNodeRef.current = el;
++        }
+       }, children);
+     });
+   };
+diff --git a/node_modules/reactstrap/lib/Collapse.js b/node_modules/reactstrap/lib/Collapse.js
+index ad1fb2f..59757d9 100644
+--- a/node_modules/reactstrap/lib/Collapse.js
++++ b/node_modules/reactstrap/lib/Collapse.js
+@@ -71,6 +71,7 @@ var Collapse = /*#__PURE__*/function (_Component) {
+     var _this;
+ 
+     _this = _Component.call(this, props) || this;
++    _this.transitionNodeRef = _react.default.createRef();
+     _this.state = {
+       height: null
+     };
+@@ -137,6 +138,7 @@ var Collapse = /*#__PURE__*/function (_Component) {
+     var childProps = (0, _utils.omit)(otherProps, _utils.TransitionPropTypeKeys);
+     return /*#__PURE__*/_react.default.createElement(_reactTransitionGroup.Transition, (0, _extends2.default)({}, transitionProps, {
+       in: isOpen,
++      nodeRef: this.transitionNodeRef,
+       onEntering: this.onEntering,
+       onEntered: this.onEntered,
+       onExit: this.onExit,
+@@ -151,7 +153,20 @@ var Collapse = /*#__PURE__*/function (_Component) {
+       return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({}, childProps, {
+         style: _objectSpread(_objectSpread({}, childProps.style), style),
+         className: classes,
+-        ref: _this2.props.innerRef
++        ref: function ref(el) {
++          _this2.transitionNodeRef.current = el;
++          var innerRef = _this2.props.innerRef;
++
++          if (!innerRef) {
++            return;
++          }
++
++          if (typeof innerRef === 'function') {
++            innerRef(el);
++          } else if (typeof innerRef === 'object') {
++            innerRef.current = el;
++          }
++        }
+       }), children);
+     });
+   };
+diff --git a/node_modules/reactstrap/lib/Fade.js b/node_modules/reactstrap/lib/Fade.js
+index c4de625..52e064b 100644
+--- a/node_modules/reactstrap/lib/Fade.js
++++ b/node_modules/reactstrap/lib/Fade.js
+@@ -47,23 +47,53 @@ var defaultProps = _objectSpread(_objectSpread({}, _reactTransitionGroup.Transit
+ });
+ 
+ function Fade(props) {
+-  var Tag = props.tag,
+-      baseClass = props.baseClass,
+-      baseClassActive = props.baseClassActive,
++  var nodeRef = _react.default.useRef(null);
++  var Tag = props.tag !== undefined && props.tag !== null ? props.tag : 'div',
++      baseClass = props.baseClass !== undefined && props.baseClass !== null ? props.baseClass : 'fade',
++      baseClassActive = props.baseClassActive !== undefined && props.baseClassActive !== null ? props.baseClassActive : 'show',
+       className = props.className,
+       cssModule = props.cssModule,
+       children = props.children,
+       innerRef = props.innerRef,
+       otherProps = (0, _objectWithoutPropertiesLoose2.default)(props, ["tag", "baseClass", "baseClassActive", "className", "cssModule", "children", "innerRef"]);
+-  var transitionProps = (0, _utils.pick)(otherProps, _utils.TransitionPropTypeKeys);
++  var transitionRaw = (0, _utils.pick)(otherProps, _utils.TransitionPropTypeKeys);
++  var transitionDefaults = {
++    appear: true,
++    enter: true,
++    exit: true,
++    in: true,
++    timeout: _utils.TransitionTimeouts.Fade
++  };
++  var transitionProps = (0, _extends2.default)({}, transitionDefaults);
++
++  for (var key in transitionRaw) {
++    if (transitionRaw[key] !== undefined) {
++      transitionProps[key] = transitionRaw[key];
++    }
++  }
++
+   var childProps = (0, _utils.omit)(otherProps, _utils.TransitionPropTypeKeys);
+-  return /*#__PURE__*/_react.default.createElement(_reactTransitionGroup.Transition, transitionProps, function (status) {
++  return /*#__PURE__*/_react.default.createElement(_reactTransitionGroup.Transition, (0, _extends2.default)({
++    nodeRef: nodeRef
++  }, transitionProps), function (status) {
+     var isActive = status === 'entered';
+     var classes = (0, _utils.mapToCssModules)((0, _classnames.default)(className, baseClass, isActive && baseClassActive), cssModule);
+     return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
+       className: classes
+     }, childProps, {
+-      ref: innerRef
++      ref: function ref(el) {
++        nodeRef.current = el;
++
++        if (!innerRef) {
++          return;
++        }
++
++        if (typeof innerRef === 'function') {
++          innerRef(el);
++        } else if (typeof innerRef === 'object') {
++          innerRef.current = el;
++        }
++      }
+     }), children);
+   });
+ }

@@ -30,6 +30,15 @@
     radial-gradient(ellipse 50% 30% at 0% 100%, rgba(94, 234, 255, 0.06), transparent 50%),
     linear-gradient(180deg, var(--ai-bg-deep) 0%, var(--ai-bg) 32%, #0a0e14 100%);
   background-attachment: fixed;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.ai-yetkinlik input,
+.ai-yetkinlik textarea {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 .ai-yetkinlik *,

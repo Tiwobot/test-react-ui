@@ -136,14 +136,47 @@ const initialForm = {
   e3: { 0: "", 1: "", 2: "", 3: "", 4: "" },
 };
 
+function isEditableCopyTarget(target, root) {
+  const el = target instanceof Element ? target : null;
+  if (!el || !root.contains(el)) return false;
+  return !!el.closest('input, textarea, [contenteditable="true"]');
+}
+
 function TechnicalConsultantAITestPage() {
   const [form, setForm] = React.useState(initialForm);
   const [result, setResult] = React.useState(null);
   const [error, setError] = React.useState("");
+  const pageRef = React.useRef(null);
 
   React.useEffect(() => {
     document.body.classList.add("ai-yetkinlik-body");
     return () => document.body.classList.remove("ai-yetkinlik-body");
+  }, []);
+
+  React.useEffect(() => {
+    const root = pageRef.current;
+    if (!root) return;
+
+    const blockUnlessEditable = (e) => {
+      if (!root.contains(e.target)) return;
+      if (isEditableCopyTarget(e.target, root)) return;
+      e.preventDefault();
+    };
+
+    const onSelectStart = (e) => {
+      if (!root.contains(e.target)) return;
+      if (isEditableCopyTarget(e.target, root)) return;
+      e.preventDefault();
+    };
+
+    const blocked = ["copy", "cut", "contextmenu", "dragstart"];
+    blocked.forEach((name) => root.addEventListener(name, blockUnlessEditable));
+    root.addEventListener("selectstart", onSelectStart);
+
+    return () => {
+      blocked.forEach((name) => root.removeEventListener(name, blockUnlessEditable));
+      root.removeEventListener("selectstart", onSelectStart);
+    };
   }, []);
 
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
@@ -264,7 +297,7 @@ function TechnicalConsultantAITestPage() {
   };
 
   return (
-    <div className="ai-yetkinlik">
+    <div ref={pageRef} className="ai-yetkinlik">
       <header className="ai-yetkinlik__header">
         <Container>
           <div className="ai-yetkinlik__header-inner">

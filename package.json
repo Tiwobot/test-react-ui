@@ -49,6 +49,9 @@
     "@babel/core": "7.18.9",
     "typescript": "5.0.4"
   },
+  "engines": {
+    "node": ">=22"
+  },
   "devDependencies": {
     "patch-package": "^8.0.1"
   },

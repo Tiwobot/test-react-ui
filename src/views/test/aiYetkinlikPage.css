@@ -209,7 +209,7 @@
 
 /* —— Question blocks —— */
 .ai-q {
-  margin: 1.35rem 0 0.85rem;
+  margin: 0 0 0.65rem;
   padding: 0.5rem 0 0.35rem 0.85rem;
   border-left: 2px solid rgba(94, 234, 255, 0.35);
   font-size: 0.88rem;
@@ -219,8 +219,16 @@
   line-height: 1.45;
 }
 
-.ai-yetkinlik .ai-q:first-of-type {
-  margin-top: 0;
+/* Cevap bloğundan sonraki soruya geniş boşluk */
+.ai-yetkinlik .ai-option-stack + .ai-q,
+.ai-yetkinlik .ai-option-stack + .form-label,
+.ai-yetkinlik .ai-field + .ai-q,
+.ai-yetkinlik .ai-d2-hint + .ai-option-stack {
+  margin-top: 3.25rem;
+}
+
+.ai-yetkinlik .ai-panel .card-body > .ai-q.mt-3 {
+  margin-top: 3.25rem;
 }
 
 .ai-yetkinlik .ai-section-hint {
@@ -242,11 +250,33 @@
 .ai-yetkinlik .ai-q-desc {
   font-size: 0.82rem;
   color: var(--ai-muted);
-  margin: -0.35rem 0 0.85rem;
+  margin: 0 0 1rem;
   line-height: 1.55;
   padding-left: 0.9rem;
   border-left: 2px solid rgba(167, 139, 250, 0.35);
   max-width: 46rem;
+}
+
+/* Bölüm 2: her bilgi sorusu grubu */
+.ai-yetkinlik .ai-question-group {
+  margin-bottom: 3.25rem;
+}
+
+.ai-yetkinlik .ai-question-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Bölüm 4–5: açık uçlu / E alt soruları */
+.ai-yetkinlik .ai-question-group--open {
+  margin-bottom: 2.5rem;
+}
+
+.ai-yetkinlik .ai-e-row {
+  margin-bottom: 2.25rem;
+}
+
+.ai-yetkinlik .ai-e-row:last-child {
+  margin-bottom: 0;
 }
 
 .ai-yetkinlik .ai-d2-hint {
@@ -289,10 +319,11 @@
 }
 
 /* —— Option tiles (radio / checkbox) —— */
-.ai-option-stack {
+.ai-yetkinlik .ai-option-stack {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.55rem;
+  margin-bottom: 0.25rem;
 }
 
 .ai-option {

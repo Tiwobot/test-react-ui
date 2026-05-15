@@ -22,7 +22,7 @@ import {
 
 function RadioBlock({ name, value, onChange, options }) {
   return (
-    <div className="ai-option-stack mb-3" role="radiogroup">
+    <div className="ai-option-stack" role="radiogroup">
       {options.map((label, idx) => {
         const id = `${name}-${idx}`;
         const checked = value === String(idx);
@@ -70,7 +70,7 @@ function CheckBlock({ values, onChange, options, noneIndex, naIndex = -1 }) {
     onChange([...s]);
   };
   return (
-    <div className="ai-option-stack mb-3">
+    <div className="ai-option-stack">
       {options.map((label, idx) => {
         const id = `cb-${noneIndex}-${naIndex}-${idx}`;
         const checked = set.has(String(idx));
@@ -695,7 +695,7 @@ function TechnicalConsultantAITestPage() {
                   ],
                 },
               ].map(({ id, t, o }) => (
-                <div key={id} className="mb-4">
+                <div key={id} className="ai-question-group">
                   <h6 className="ai-q">{t}</h6>
                   <RadioBlock
                     name={id}
@@ -808,7 +808,7 @@ function TechnicalConsultantAITestPage() {
                   "C4. Müşteri verisi veya sözleşme / taahhüt riski açısından sizi en çok düşündüren konu nedir?",
                 ],
               ].map(([key, label]) => (
-                <div key={key} className="mb-3">
+                <div key={key} className="ai-question-group ai-question-group--open">
                   <label className="form-label">{label}</label>
                   <Input
                     type="textarea"
@@ -854,7 +854,7 @@ function TechnicalConsultantAITestPage() {
                 "“Yapılmaması gerekenler”",
                 "Maskelemiş örnek veya şablon",
               ].map((label, row) => (
-                <div key={row} className="mb-2">
+                <div key={row} className="ai-e-row">
                   <span className="ai-subcap d-block">{label}</span>
                   <RadioBlock
                     name={`e2-${row}`}
@@ -872,7 +872,7 @@ function TechnicalConsultantAITestPage() {
                 "Context window sınırları",
                 "AI agent vs sohbet",
               ].map((label, row) => (
-                <div key={row} className="mb-2">
+                <div key={row} className="ai-e-row">
                   <span className="ai-subcap d-block">{label}</span>
                   <RadioBlock
                     name={`e3-${row}`}
